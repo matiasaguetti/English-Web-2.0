@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web English Center — Clase demo gratuita</title>
+  <meta name="description" content="Clases de inglés online. Reserva una clase demo gratuita y acelera tu nivel con profesores nativos y metodología práctica." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --color-primary:#0082d4;   /* brand */
+      --color-secondary:#56c5fc; /* brand */
+      --color-white:#ffffff;
+      --color-accent:#FFC300;    /* derivado de RGB 255,195,0 en manual (confirmar) */
+      --text:#0b1b2b;
+      --max-width:1100px;
+      --radius:10px;
+      --container-padding:20px;
+      --shadow: 0 8px 24px rgba(11,27,43,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      margin:0;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+      line-height:1.4;
+    }
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:var(--container-padding)}
+    header{padding:40px 0; display:flex; align-items:center; justify-content:space-between;}
+    .logo{display:flex; gap:14px; align-items:center;}
+    .logo .mark{
+      width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--color-primary),var(--color-secondary));
+      display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;
+      box-shadow:var(--shadow);
+    }
+    nav a{color:rgba(11,27,43,0.75);text-decoration:none;margin-left:18px;font-weight:600}
+    /* HERO */
+    .hero{
+      display:grid;grid-template-columns:1fr 460px;gap:32px;align-items:center;padding:40px 0;
+    }
+    .hero .eyebrow{display:inline-block;background:rgba(86,197,252,0.12);color:var(--color-primary);padding:6px 12px;border-radius:999px;font-weight:600;font-size:13px}
+    .hero h1{font-size:36px;margin:10px 0 12px;line-height:1.05}
+    .hero p.lead{margin:0 0 22px;color:rgba(11,27,43,0.75)}
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{
+      padding:14px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    }
+    .btn-primary{background:var(--color-primary);color:white}
+    .btn-outline{background:transparent;border:2px solid var(--color-secondary);color:var(--color-primary);font-weight:700}
+    .card{
+      background:white;border-radius:12px;padding:18px;box-shadow:var(--shadow)
+    }
+    .stats{display:flex;gap:12px;justify-content:space-between;margin-top:18px}
+    .stat{flex:1;text-align:center}
+    .stat strong{display:block;font-size:20px;color:var(--color-primary)}
+    /* FEATURES */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:30px 0}
+    .feature{background:white;padding:18px;border-radius:12px;box-shadow:var(--shadow);min-height:120px}
+    .feature h4{margin:8px 0 6px}
+    /* TESTIMONIALS */
+    .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .testimonial{background:linear-gradient(180deg, #ffffff, #f9fbff);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    footer{padding:30px 0;color:rgba(11,27,43,0.6);font-size:14px}
+    /* Responsive */
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .hero .card{margin:0 auto}
+      .features{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    /* Small helpers */
+    .muted{color:rgba(11,27,43,0.6);font-size:14px}
+    form label{font-weight:600;font-size:13px;margin-bottom:6px;display:block}
+    input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #e6eef9;background:white;font-size:15px}
+    .form-compact{display:flex;gap:10px}
+    .form-compact input{flex:1}
+    .micro{font-size:13px;color:rgba(11,27,43,0.6)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark" aria-hidden="true">W</div>
+        <div>
+          <div style="font-weight:800">Web English Center</div>
+          <div style="font-size:12px;color:rgba(11,27,43,0.55)">Inglés online — Profesores nativos</div>
+        </div>
+      </div>
+      <nav aria-label="menu">
+        <a href="#metodo">Método</a>
+        <a href="#precios">Precios</a>
+        <a href="#testimonios">Testimonios</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <span class="eyebrow">Clase demo gratuita</span>
+          <h1 id="hero-title">Aprende inglés online con profesores nativos — práctica real desde la primera clase</h1>
+          <p class="lead">Metodología comunicativa, grupos reducidos y seguimiento personalizado. Reserva una clase demo en 30 segundos.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#form">Reservar clase gratis</a>
+            <a class="btn btn-outline" href="#precios">Ver precios</a>
+          </div>
+
+          <div class="stats" role="list" aria-label="estadísticas">
+            <div class="stat">
+              <strong>+1.200</strong>
+              <span class="muted">alumnos satisfechos</span>
+            </div>
+            <div class="stat">
+              <strong>95%</strong>
+              <span class="muted">satisfacción</span>
+            </div>
+            <div class="stat">
+              <strong>Clases 24/7</strong>
+              <span class="muted">flexibilidad total</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card" aria-label="reserva">
+          <h3 style="margin:0 0 8px">Reserva tu clase demo</h3>
+          <form id="form" action="https://example.com/submit" method="POST" novalidate>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" required placeholder="Tu nombre">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="nombre@ejemplo.com">
+            <div style="display:flex;gap:8px;margin-top:10px">
+              <button class="btn btn-primary" type="submit" style="flex:1">Reservar clase</button>
+            </div>
+            <p class="micro" style="margin-top:8px">Al enviar aceptas recibir un email de confirmación. No compartimos tus datos.</p>
+          </form>
+        </aside>
+      </section>
+
+      <section id="metodo">
+        <div style="display:flex;align-items:center;gap:20px;padding:18px 0">
+          <div style="flex:1">
+            <h2>Metodología práctica en 3 pasos</h2>
+            <p class="muted">Diseñada para mejorar la fluidez y la confianza en situaciones reales: foco en conversación, feedback personalizado y material interactivo.</p>
+            <div class="features" role="list">
+              <div class="feature" role="listitem">
+                <strong>Clases en vivo</strong>
+                <p class="muted">Profesores nativos con plan por niveles.</p>
+              </div>
+              <div class="feature" role="listitem">
+                <strong>Material interactivo</strong>
+                <p class="muted">Ejercicios prácticos y seguimiento semanal.</p>
+              </div>
+              <div class="feature" role="listitem">
+                <strong>Progreso medible</strong>
+                <p class="muted">Reportes y recomendaciones por alumno.</p>
+              </div>
+            </div>
+          </div>
+          <div style="width:320px">
+            <div style="border-radius:12px;overflow:hidden">
+              <!-- Placeholder image, reemplaza por hero.webp -->
+              <img src="https://via.placeholder.com/640x480.webp?text=Clase+en+vivo" alt="Alumnos en clase online" width="640" height="480" style="width:100%;height:auto;display:block">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonials" role="list">
+          <div class="testimonial" role="listitem">
+            <p><strong>María G.</strong> — "Mi nivel mejoró en 3 meses. Las clases son muy prácticas y los profesores atentos."</p>
+          </div>
+          <div class="testimonial" role="listitem">
+            <p><strong>Carlos P.</strong> — "Reservé una demo y me convenció la metodología. Recomiendo 100%."</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="precios" style="padding:30px 0">
+        <h2>Planes</h2>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card" style="flex:1;min-width:220px">
+            <h3>Plan Starter</h3>
+            <strong>USD 29 / mes</strong>
+            <p class="muted">2 clases semanales — grupo reducido</p>
+            <div style="margin-top:10px"><a class="btn btn-outline" href="#form">Elegir</a></div>
+          </div>
+          <div class="card" style="flex:1;min-width:220px">
+            <h3>Plan Pro</h3>
+            <strong>USD 59 / mes</strong>
+            <p class="muted">Clases ilimitadas + feedback semanal</p>
+            <div style="margin-top:10px"><a class="btn btn-primary" href="#form">Elegir</a></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          © Web English Center — <span class="muted">Todos los derechos reservados</span>
+        </div>
+        <div class="muted">Contacto: hola@webenglishcenter.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Simple accessibility & analytics placeholder -->
+  <script>
+    // Placeholder: aquí insertarías el snippet de GA4/measurement y el dataLayer para eventos de conversión
+    // Ej: window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+    // gtag('event','conversion', { 'method': 'form' });
+    // Para preview no se envía nada.
+  </script>
+</body>
+</html>
